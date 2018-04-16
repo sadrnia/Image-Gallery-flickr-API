@@ -1,0 +1,266 @@
+﻿/**
+* 1. Change the default font family in all browsers.
+* 2. Correct the line height in all browsers.
+* 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+*/
+html {
+    font-family: sans-serif; /* 1 */
+    line-height: 1.15; /* 2 */
+    -ms-text-size-adjust: 100%; /* 3 */
+    -webkit-text-size-adjust: 100%; /* 3 */
+    background-color: #eaeaea;
+}
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+    overflow-x: hidden;
+}
+
+.overflow_hidden {
+    overflow: hidden !important;
+}
+
+.display_block {
+    display: block !important;
+}
+
+header {
+    background-color: #CFECEC;
+    margin: -25px -10px -10px -10px;
+    padding: 10px 10px 20px 10px;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+    header h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+        color: #666666;
+    }
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+    header .form_search input[type="search"] {
+        -webkit-appearance: textfield; /* 1 */
+        outline-offset: -2px; /* 2 */
+        padding: 5px;
+        width: 40%;
+        border-radius: 4px;
+    }
+
+    header .form_search input[type=submit], button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 6px 20px;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+
+/**
+ result search text
+ */
+span.notes {
+    font-size: 14px;
+    padding: 5px;
+    line-height: 30px;
+    color: #666;
+}
+
+/**
+Thumbnails
+ */
+.thumbnails_list {
+    list-style-type: none;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+    .thumbnails_list li {
+        display: inline-block;
+        margin: 10px 5px 0 5px;
+        vertical-align: top;
+        /*height: 250px;* 250px;*/
+    }
+
+        .thumbnails_list li > a,
+        .thumbnails_list li > a img {
+            border: none;
+            outline: none;
+            display: block;
+            position: relative;
+        }
+
+.image_details {
+    background: -moz-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(125,185,232,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(125,185,232,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(125,185,232,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(125,185,232,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#000000',GradientType=0 ); /* IE6-8 */
+    margin-left: 0;
+    padding: 2px 4px;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+.image_details, .image_details_container {
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: #fff;
+    font: normal 11px arial,sans-serif;
+    line-height: 100%;
+    white-space: nowrap;
+    width: 100%;
+    padding: 50px 0 8px 0;
+    font-size: 14px;
+}
+
+.image_details {
+     bottom: -10px;
+}
+
+.img_detail_span {
+    bottom: 0;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.image_details_container {
+    display: none;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    background: url(image/loader.gif) no-repeat center center;
+    border: 1px solid #efefef;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnails_list div a:hover .image_details_container {
+    display: block;
+}
+
+    .thumbnails_list div a:hover .image_details_container .image_details {
+        bottom: 0px;
+    }
+
+.thumbnails_pager_container {
+    bottom: 0px;
+    width: 100%;
+    margin: 10px 0 20px 0;
+}
+
+.thumbnails_pager {
+    text-align: center;
+    opacity: 0.8;
+    height: 20px;
+    font-size: 20px;
+}
+
+.next_link {
+    float: right;
+    margin-right: 5px;
+}
+
+.navigator_link {
+    text-decoration: none;
+    padding: 5px 10px;
+    background: #eaeaea;
+    color: #333;
+    font-weight: bold;
+}
+
+    .navigator_link:hover {
+        background: #cccccc;
+    }
+
+.navigator_link_disable {
+    color: #ccc;
+    background-color: #fafafa !important;
+}
+
+.page_count {
+    display: inline-block;
+}
+
+.previous_link {
+    float: left;
+    margin-left: 5px;
+}
+
+.enlarge_photo_galary {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 999;
+    overflow: hidden;
+    padding: 10px;
+    display: none;
+}
+
+.enlarge_photo_galary img {
+    max-width: 90%;
+    max-height: 93%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.enlarge_photo_galary .gallery_arrow {
+    position: absolute;
+    bottom: 10px;
+}
+
+.enlarge_photo_galary .gallery_arrow_left {
+    float: left;
+    left: 10px;
+}
+
+.enlarge_photo_galary .gallery_arrow_right {
+    float: right;
+    right: 10px;
+}
+
+.enlarge_photo_galary .img_name {
+    display: block;
+    color: #fff;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    left: 15%;
+    bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.enlarge_photo_galary .img_close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 32px;
+    cursor: pointer;
+}

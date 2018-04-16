@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Gallery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="Nordea-Test,Image Gallery to access the Flickr API">
+    <meta name="author" content="Farzaneh Sadrnia">
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <h1>Simple Image gallery search with Flickr API</h1>
+        <form class="form_search"  method="get" id="form_search" role="search" >
+            <input type="search" name="query" id="query" placeholder="Search" required />
+            <input type="submit" value="Search" />
+        </form>
+        <span class="notes" id="notes"></span>
+    </header>
+    <div id="thumbnails_list" class="js_masonry thumbnails_list"></div>
+    <div class="thumbnails_pager_container">
+        <div class="thumbnails_pager">
+            <a id="previous_page" href="#" class="previous_link navigator_link" data-id="previous"></a>
+            <div class="page_count"></div>
+            <a id="next_page" class="next_link navigator_link" data-id="next" href="#"></a>
+        </div>
+    </div>
+    <div class="enlarge_photo_galary">
+        <img src="" class="enlarge_photo_image" id="enlarge_photo_image">
+        <button class="gallery_arrow gallery_arrow_left" data-id="previous">
+            <span class="visibility_hidden">Previous photo</span>
+        </button>
+        <button class="gallery_arrow gallery_arrow_right" data-id="next">
+            <span class="visibility_hidden">Next photo</span>
+        </button>
+        <div class="img_name" ></div>
+        <img class="img_close" id="img_close_popup" src="css/image/close_button.png">
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/flickr.js"></script>
+    <script src="js/images.js"></script>
+    <script src="js/general.js"></script>
+</body>
+</html>
